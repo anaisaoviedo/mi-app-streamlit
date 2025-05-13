@@ -30,7 +30,7 @@ def remove_outliers(X):
 import pickle
 filename = 'pipeline_modelo.pkl'
 pipeline = pickle.load(open(filename, 'rb'))
-pipeline
+#pipeline
 
 #Cargamos los datos futuros
 #data = pd.read_csv("videojuegos-datosFuturos.csv")
@@ -57,7 +57,7 @@ data = pd.DataFrame(datos, columns=['Edad', 'videojuego','Plataforma','Sexo','Co
 
 #Hacemos la predicción con el Tree
 Y_Tree = pipeline.predict(data)
-Y_Tree
+print(Y_Tree)
 
 data['Prediccion']=Y_Tree
 data
